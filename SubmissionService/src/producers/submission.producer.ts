@@ -1,9 +1,7 @@
-import { tryCatch } from "bullmq";
 import { IProblemDetails } from "../apis/problem.api";
 import { SubmissionLanguage } from "../models/submission.model";
 import { submissionQueue } from "../queues/submission.queue";
 import logger from "../config/logger.config";
-import { InternalServerError } from "../utils/errors/app.error";
 
 
 export interface ISubmissionJob {

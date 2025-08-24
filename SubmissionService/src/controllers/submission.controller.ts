@@ -1,7 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import logger from "../config/logger.config";
 import { SubmissionService } from "../services/submission.service";
-import { SubmissionStatus } from "../models/submission.model";
 
 export class SubmissionController {
     private submissionService: SubmissionService;

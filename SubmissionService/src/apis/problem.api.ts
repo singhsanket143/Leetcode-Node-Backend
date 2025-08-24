@@ -1,5 +1,4 @@
 import axios, { AxiosResponse } from "axios";
-import { tryCatch } from "bullmq";
 import { serverConfig } from "../config";
 import { InternalServerError } from "../utils/errors/app.error";
 import logger from "../config/logger.config";
