@@ -35,6 +35,4 @@ app.listen(serverConfig.PORT, async () => {
     logger.info("Workers started successfully");
 
     await pullAllImages();
-
-    console.log("Image pulled successfully");
 });
