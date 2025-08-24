@@ -6,6 +6,7 @@ import { appErrorHandler, genericErrorHandler } from './middlewares/error.middle
 import logger from './config/logger.config';
 import { attachCorrelationIdMiddleware } from './middlewares/correlation.middleware';
 import { startworkers } from './workers/evaluation.worker';
+import { pullAllImages } from './utils/containers/pullImage.util';
 const app = express();
 
 app.use(express.json());
@@ -32,4 +33,8 @@ app.listen(serverConfig.PORT, async () => {
     logger.info(`Press Ctrl+C to stop the server.`);
     await startworkers();
     logger.info("Workers started successfully");
+
+    await pullAllImages();
+
+    console.log("Image pulled successfully");
 });
