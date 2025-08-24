@@ -1,0 +1,1 @@
+export const SUBMISSION_QUEUE: string = "submission";
